@@ -1,0 +1,124 @@
+.login-background{
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+   
+}
+    
+.login-background .login-container{
+    background-color: aliceblue;
+    width: 400px;
+    margin: auto;
+    height: 450px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+}
+.login-background .login-container .login-content{
+    padding: 15px;
+}
+.login-content  .text-login{
+    text-align: center;
+    font-weight: 600px;
+    font-size: 24px;
+    padding-top: 10px;
+}
+.lb-username{
+    margin-left: 0%;
+}
+.lb-password{
+    margin-left: 0%;
+}
+.login-input{
+    margin: 10px 0;
+}
+.btn-login{
+    width: 100%;
+    margin: 10px 0;
+    height: 35px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+    color: white;
+    font-size: 20px;
+    border-radius:15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.forgot-password{
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 35px;
+}
+.sign-up{
+    font-size: 15px;
+    cursor: pointer;
+    padding-left: 15%;
+}
+.forgot-password:hover{
+    font-weight: bold;
+}
+.sign-up:hover{
+    font-weight: bold;
+
+}
+.social-login{
+    display: flex;
+    justify-content: center;
+   
+}
+.social-login .google{
+    font-size:35px; 
+    color: wheat;
+    background-color:#EA4335;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 8px solid #EA4335;
+}
+.facebook{
+    font-size:35px; 
+    color: wheat;
+    background-color: #17BE;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 15px;
+    border: 8px solid #17BE;
+}
+.custom-input-password{
+    position: relative;
+}
+
+i.far.fa-eye{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+}
+i.far.fa-eye-slash{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    cursor: pointer;
+}
+.errorMsg{
+    color: #EA4335;
+    font-size: 12px;
+    padding-top: 15px;
+    text-align: center;
+}

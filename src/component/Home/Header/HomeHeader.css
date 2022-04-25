@@ -1,0 +1,191 @@
+.home-header-container {
+    height: 60px;
+    width: 100%;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100000;
+}
+
+.home-header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column;  : cho 2 thang con o tren cung 1 hang doc */
+}
+
+.home-header-content .left-content {
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.home-header-content .center-content {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.home-header-content .left-content .header-logo {
+     height: 100%;
+     transform: scale(0.5,0.5);
+     margin-left: 20px;
+}
+.header-text {
+    /* background-color: #43b7b0; */
+    color: #43b7b0;
+    width: 147px;
+    height: 50px;
+    position: absolute;
+    left: 140px;
+    top: 18px;
+}
+.logo-text {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+i.fas.fa-bars {
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+}
+.center-content .child-content .sub-title{
+    font-weight: 400;
+    font-size: 12px;
+
+}
+.center-content .child-content b{
+    font-size: 15px;
+}
+
+
+.home-header-content .right-content {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.home-header-banner{
+    background-image: url( '../../../assets/background/back_ground_2.png');
+
+    height: 485px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+.home-header-banner .title-1{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 1px 2px #333;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+.home-header-banner .title-2{
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px #333;
+    color: white;
+    margin-bottom: 15px;
+
+}
+.home-header-banner .search{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    border-radius: 25px;
+    /* background-color: #49bce2; */
+    background-color: whitesmoke;
+    margin: 0 auto;
+    padding: 10px;
+
+     
+}
+i.fa-search{
+   margin: 5px 5px;
+}
+.search-input{
+    height: 30px;
+    width: 360px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.content-up{
+    height: 65%;
+    padding: 15px;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
+
+   
+}
+.content-down{
+    display: flex;
+    height: 35%;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 13px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+}
+.home-header-banner .options{
+    display: flex;
+    text-align: center;
+    gap: 50px;
+    justify-content: center;
+   
+}
+.options-child{
+    width: 125px;
+    outline: none;
+
+}
+.options-child .icon-child{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: white;
+    font-size: 20px;
+    color: #49bce2;
+}
+.options-child .text-child{
+    font-size: 17px;
+    text-align: center;
+}
+.options-child .text-child:hover{
+    cursor: pointer;
+    color: #49bce2;
+}
+i.fas.fa-question-circle{
+    margin-right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.support{
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.language-vi{
+    cursor: pointer;
+}
+.language-vi .active{
+    color: rgb(187, 38, 38);
+}
+.language-en{
+    margin: 0 10px;
+    cursor: pointer;
+}
+.language-en .active{
+    color: rgb(68, 43, 209);
+}
+

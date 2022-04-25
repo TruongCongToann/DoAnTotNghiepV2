@@ -1,0 +1,109 @@
+
+/* reset slick slider library */
+
+/* Dau : !important dung de ghi de lai cac class cua thu vien import tu react */
+.slick-prev{
+    
+    background-color: #fff !important;
+
+    z-index: 2000 !important;
+    cursor: pointer !important;
+    left: -10px !important;
+    border: 2px solid #d7d7d7 !important;
+    height: 48px !important;
+    width: 44px !important;
+   
+}
+.slick-prev:hover{
+    background:#eceaea !important ;
+}
+.slick-prev::before,.slick-next::before{
+    font-family: FontAwsome !important;
+    color: red !important;
+    font-size: 20px;
+    
+}
+
+.slick-next{
+    background-color: #fff !important;
+
+    z-index: 2000 !important;
+    cursor: pointer !important;
+    right: -10px !important;
+    border: 2px solid #d7d7d7 !important;
+    height: 48px !important;
+    width: 44px !important;
+}
+.slick-next:hover{
+        background:#eceaea !important ;
+
+}
+
+.section-share .section-speciality,.section-medical-facility,.section-handbook,.section-outstanding-doctor{
+    background:#f5f5f5;
+    
+}
+
+.section-share{
+    height: 330px;
+}
+.section-container{
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+}
+.section-container .section-header{
+    height: 60px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+.section-container .section-header .section-title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.section-container .section-header .btn-section{
+    float :right;
+    padding: 10px 15px;
+    display: block;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #ebebeb;
+    color: black;
+    cursor: pointer;
+}
+.section-container .section-header .btn-section:hover{
+    color: #fff;
+    background: #49bce2;
+}
+.section-container .section-body .section-custom{
+    padding: 5px; 
+}
+
+.section-container .section-body .section-custom .section-custom-title{
+    text-align: center;
+}
+
+.section-container .section-body .section-custom .section-custom-title:hover{
+    font-weight: 500;
+    cursor: pointer;
+    color: #49bce2;
+}
+.section-container .section-body .section-custom .position {
+  cursor: pointer;
+}
+.section-container .section-body .section-custom .position .position-custom-title:hover{
+    font-weight: 420;
+    cursor: pointer;
+    color: #49bce2;
+    cursor: pointer;
+}
+
+h3{
+
+    width: 100%;
+    height: 100%;
+}
+
+

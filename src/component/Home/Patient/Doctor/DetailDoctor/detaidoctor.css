@@ -1,0 +1,89 @@
+.doctor-detail-container{
+    height: 100%;
+    /* margin: 0 100px; */
+
+}
+.intro-doctor{
+    display: flex;
+    padding-top: 15px;
+    padding: 10px 100px;
+
+    /* height: 120px; */
+}
+.intro-doctor .content-left{
+    /* width: 20%; */
+    border: 1px solid grey;
+    background: center center no-repeat;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0px 20px;
+}
+.intro-doctor .content-right{
+    width: 80%;
+    /* border: 1px solid gray; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.up{
+    font-size: 15px;
+    font-weight: 600;
+}
+.down{
+    padding-top: 5px;
+    font-size: 13px;
+}
+.comment-doctor{
+    height: 10px;
+}
+.create-content-doctor{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: none;
+    padding: 5px;
+    background-color: rgb(41, 155, 155);
+    color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.create-content-doctor:hover{
+    opacity: 0.9;
+}
+.chi-tiet-doctor{
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 10px 100px;
+    border: 1px solid #ddd;
+
+}
+.chi-tiet-doctor p{
+  font-size: 15px;
+
+}
+.chi-tiet-doctor ul, ol {
+    margin: 10px 0px 10px 25px;
+
+}
+.chi-tiet-doctor li{
+    font-size: 13px;
+}
+.chi-tiet-doctor img{
+    width: 100%;
+}
+.schedule-doctor{
+    margin: 0 100px;
+    height: 200px;
+    display: flex;
+    min-height: 200px;
+    /* border: 1px solid red; */
+
+}
+.schedule-doctor .content-left{
+        width: 50%;
+}
+.schedule-doctor .content-right{
+    width: 50%;
+}

@@ -1,0 +1,22 @@
+.home-footer{
+   text-align: center;
+   padding-top: 7px;
+}
+a{
+    text-decoration: unset !important;
+    color: #2769bc !important;
+}
+ .more-info {
+    width: auto;
+    height: 40px;
+    color: #2769bc;
+
+}
+
+i.fa-github-square:before{
+    font-size: 30px;
+    padding-left: 15px;
+    color: rgb(61, 58, 58);
+    cursor: pointer;
+    border-radius: 50%;
+}
