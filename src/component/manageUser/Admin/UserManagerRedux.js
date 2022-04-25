@@ -27,6 +27,9 @@ const UserManagerRedux = () => {
     var url_Users="https://api-truongcongtoan.herokuapp.com/api/users";
     var url_OutStandingDoctor = "https://api-truongcongtoan.herokuapp.com/api/users/0/6";
     var url_doctor = 'https://api-truongcongtoan.herokuapp.com/api/users/doctors'; 
+    var url_Price = "https://api-truongcongtoan.herokuapp.com/api/allcode/PRICE";
+    var url_Payment = "https://api-truongcongtoan.herokuapp.com/api/allcode/PAYMENT";
+    var url_Province = "https://api-truongcongtoan.herokuapp.com/api/allcode/PROVINCE";
 
     //fetch data 
     const { data:gender } = useFetch(url_Gender);
@@ -35,6 +38,9 @@ const UserManagerRedux = () => {
     const {data:userList} = useFetch(url_Users);
     const {data:outstandingDoctor} = useFetch(url_OutStandingDoctor);
     const { data:doctors } = useFetch(url_doctor);
+    const { data:prices } = useFetch(url_Price);
+    const {data:payments} =  useFetch(url_Payment);
+    const {data:provinces} =  useFetch(url_Province);
 
     //truyen data len redux
     const dispatch = useDispatch();
@@ -43,6 +49,9 @@ const UserManagerRedux = () => {
         gender:[],
         position:[],
         role:[],
+        price:[],
+        payment:[],
+        province:[]
        
     }
     const user={
@@ -71,6 +80,7 @@ const UserManagerRedux = () => {
     } 
 }
 
+
     //lay ra data from redux
     const redux_AllCode = useSelector(state => state.allCode);
 
@@ -78,7 +88,7 @@ const UserManagerRedux = () => {
  
     const redux_user_loginedUser=useSelector(state=>state.loginedUser);
 
-
+   
 
      const [previewImgURL, setpreviewImgURL] = useState('');
      const [isOpen, setisOpen] = useState(false);
@@ -107,15 +117,14 @@ const UserManagerRedux = () => {
             allCode.gender=gender;
             allCode.role=role;
             allCode.position=position;
-            console.log("all code la ",allCode);
+            allCode.price = prices;
+            allCode.payment = payments;
+            allCode.province =provinces;
+            
             dispatch(allAction.allCodeAction.addAllCode(allCode));
             // dispatch(allAction.adminAction.addUserByAdmin(userList));
-        }, [gender,role,position]);
-
-        const doctorssss = useSelector(state => state.doctor)
-        console.log("doctors list la  ", doctors)
-        console.log("userlist la ", userList)
-
+        }, [gender,role,position,prices,payments,provinces]);
+// console.log("data thu duoc la ",redux_AllCode );
 
         useEffect(() => {
             if (userList && doctors && outstandingDoctor) {

@@ -35,7 +35,7 @@ const ManageSchedule = () => {
     const {data:ScheduleTime} = useFetch(url);
 
   
-
+// console.log(ScheduleTime)
     const MAX_NUMBER=10;
     let result = [];
   
@@ -155,17 +155,17 @@ const handleSaveSchedule =  async () =>{
       console.log("gia tri id la ",selectedDoctor.value)
       let response = await getScheduleByDoctorid(selectedDoctor.value);
       console.log("ket qua ",response.data)
-     setdoctorScheduleInfo(selectedDoctor.data);
+      setdoctorScheduleInfo(selectedDoctor.data);
 
     }else{
       // console.log("su khac biet luc xoa ",deleteDiferences)
-      deleteDiferences.map(item =>{
+      deleteDiferences.map(item => {
         console.log("gia tri bi xoa la ",item)
         let response =  deleteSchedule(item.doctorid,item.date,item.timetype);
         console.log(response)
       })
     }
-    setInterval('window.location.reload()', 4000);
+    // setInterval('window.location.reload()', 4000);
  let response = await getScheduleByDoctorid(selectedDoctor.value);
       console.log("ket qua ",response.data)
      setdoctorScheduleInfo(response.data);

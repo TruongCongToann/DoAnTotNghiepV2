@@ -12,14 +12,15 @@ import storage from 'redux-persist/lib/storage' //
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist:['loginedUser','doctor']
+    whitelist:['loginedUser','doctor','allCode']
   }
 // combineReducers de tong hop lai tat ca ca reducer 
 const rootReducers = combineReducers({
     loginedUser: loginedUser,
     allCode:allCodeReducer,
     admin:adminReducer,
-    doctor:DoctorReducer
+    doctor:DoctorReducer,
+
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducers)

@@ -86,7 +86,7 @@ let date =alldays&&alldays.length>0&&alldays[0].value
                 {
                allAvaiableTime.map((item,index) =>{
                   return(
-                    <button key={index}>10:00 - 11:00</button>
+                    <button key={index}>{item.allCode.valuevi}</button>
                   )
                })
               }

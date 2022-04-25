@@ -1,5 +1,6 @@
 export const ADD_USER_BY_ADMIN = 'ADD_USER_BY_ADMIN';
 export const ADD_ALLCODE = 'ADD_ALLCODE';
+export const ADD_PRICE = 'ADD_PRICE';
 
 export const LOG_OUT ='LOG_OUT';
 
@@ -33,3 +34,5 @@ export const CRUD_ACTION  = {
     DELETE:"DELETE",
     READ:"READ"
 }
+
+

@@ -4,6 +4,9 @@ const initialState = {
     genders:[],
     roles:[],
     position:[],
+    price:[],
+    payment:[],
+    province:[]
 
 }
 const allCodeReducer =(state =initialState, action) => {
@@ -15,11 +18,15 @@ const allCodeReducer =(state =initialState, action) => {
               genders: action.payload.gender,
               roles:action.payload.role,
               position:action.payload.position,
-             
+             price:action.payload.price,
+             payment:action.payload.payment,
+             province:action.payload.province
+
               
           }
       
         }
+      
        
     
     
