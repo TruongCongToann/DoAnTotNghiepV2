@@ -150,15 +150,33 @@ const DoctorManageRedux = () => {
 
         }
 }
-const handleSelectPrice = (input) =>{
-        setselectedPrice(input);
-}
-
-console.log("gia duoc chon la ",selectedPrice);
-
+const handleSelectInput = (input,flagIn) =>{
+    
+        if (flagIn === "price") {
+            setselectedPrice(input);
+        }
+        if (flagIn === "payment") {
+            setselectedPayment(input);
+        }
+        if (flagIn === "province") {
+            setselectedProvince(input);
+        }
+    }
     //handle on change desciption
     const handleOnchangeDescription = (event) =>{
         setdescription(event.target.value);
+    }
+    //write nameclinic info
+    const handleOnchangeIn = (event,flag) =>{
+       if (flag ==="clinicName") {
+        setnameClinic(event.target.value);
+       }
+       if (flag ==="addressClinic") {
+        setaddressClinic(event.target.value);
+       }
+       if (flag ==="note") {
+        setnote(event.target.value);
+       }
     }
 
     // Finish!
@@ -166,8 +184,6 @@ const handleEditorChange = ({ html, text }) =>{
     setContentMarkDown(text);
     setContentHTML(html);
   }
-
-
 
   useEffect(() => {
   if ( redux_user_Doctors.listDoctors&&redux_user_Doctors.listDoctors.length>0) {
@@ -187,9 +203,15 @@ const handleEditorChange = ({ html, text }) =>{
     for (let i = 0; i < redux_AllCode.price.length; i++) {
         listPrice.push(buildDataInput(redux_AllCode.price[i],"price"));   
     }
-   
+    for (let i = 0; i < redux_AllCode.payment.length; i++) {
+        listPayment.push(buildDataInput(redux_AllCode.payment[i],"payment"));   
+    }
+    for (let i = 0; i < redux_AllCode.province.length; i++) {
+        listProvince.push(buildDataInput(redux_AllCode.province[i],"province"));   
+    }
   }
-  },[selectedPrice,listPrice]);
+  },[selectedPrice,listPrice,listPayment,selectedPayment,selectedProvince,listProvince]);
+
 
 //   console.log("gia tri price nhan duoc la ",listPrice);
   useEffect(() => {
@@ -220,6 +242,21 @@ const handleEditorChange = ({ html, text }) =>{
       
         }
    }
+   if (flag === "payment") {
+    if ( inputData ) {
+        object.value = inputData.key;
+        object.label = `${inputData.valuevi}`;
+      
+        }
+   }
+   if (flag === "province") {
+    if ( inputData ) {
+        object.value = inputData.key;
+        object.label = `${inputData.valuevi}`;
+      
+        }
+   }
+
     return object;
   }
 
@@ -264,35 +301,54 @@ const handleEditorChange = ({ html, text }) =>{
                             <label>Chọn giá khám (đơn vị là đồng):</label>
                             <Select
                            defaultValue={selectedPrice}
-                           onChange={handleSelectPrice}
+                           onChange={ (event,flag) =>handleSelectInput(event,"price") }
                            options={listPrice}
-                           placeholder = {"Chọn bác sĩ"}
+                           placeholder = {"Chọn giá khám"}
                        /> 
                         </div>
                         <div className="col-4 form-group">
                             <label>Chọn phương thức thanh toán:</label>
-                            <input className="form-control"></input>
+                            <Select
+                           defaultValue={selectedPayment}
+                           onChange={ (event,flag) =>handleSelectInput(event,"payment") }
+                           options={listPayment}
+                           placeholder = {"Chọn phương thức thanh toán"}
+                          /> 
                         </div>
                         <div className="col-4 form-group">
                             <label>Chọn tỉnh thành:</label>
-                            <input className="form-control"></input>
+                            <Select
+                           defaultValue={selectedProvince}
+                           onChange={ (event,flag) =>handleSelectInput(event,"province") }
+                           options={listProvince}
+                           placeholder = {"Chọn tỉnh thành"}
+                          /> 
                         </div>
                         <div className="col-4 form-group">
                             <label>Tên phòng khám: </label>
-                            <input className="form-control"></input>
+                            <input className="form-control"
+                            onChange={(event,flag)=>handleOnchangeIn(event,"clinicName")}
+                            value={nameClinic}
+                            ></input>
                         </div>
                         <div className="col-4 form-group">
                             <label>Địa chỉ phòng khám:</label>
-                            <input className="form-control"></input>
+                            <input className="form-control"
+                             onChange={(event,flag)=>handleOnchangeIn(event,"addressClinic")}
+                             value={addressClinic}
+                             ></input>
                         </div>
                         <div className="col-4 form-group">
                             <label>Lưu ý:</label>
-                            <input className="form-control"></input>
+                            <input className="form-control"
+                             onChange={(event,flag)=>handleOnchangeIn(event,"note")}
+                             value={note}
+                            ></input>
                         </div>
                     </div>
 
                        <MdEditor 
-                       style={{ height: '500px' }} 
+                       style={{ height: '500px',marginTop:'40px' }} 
                        renderHTML={text => mdParser.render(text)} 
                        onChange={handleEditorChange} 
                        value={contentMarkDown}
