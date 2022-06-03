@@ -26,7 +26,7 @@ const useFetch = (URL = "", params = {}) =>{
   }, [shouldRefetch]);
   return { isLoading, data,refresh };
 }
-//https://api-truongcongtoan.herokuapp.com/api/users
+//http://localhost:8080/api/users
 
 //add new user 
 const handleLoginAPI = (URL = "", data = {}) => {
@@ -53,26 +53,27 @@ const editMarkdown = (URL = "",params = {}) =>{
   return axios.put(URL+"/"+params.markdown_id,params);
 }
 //get markdown thong qua markdown_id
-const getDetailInforDoctor = async (inputId) =>{
-  let url = `https://api-truongcongtoan.herokuapp.com/api/markdowns/${inputId}`;
+const getDetailInforDoctor = async (urlIn,inputId) =>{
+  let url = `${urlIn}${inputId}`;
+  // console.log("dia chi la",url);
   return  axios.get(url);  
 }
 //get schedule by doctorid
 const getScheduleByDoctorid = async (inputId) =>{
-  let url = `https://api-truongcongtoan.herokuapp.com/api/schedules/${inputId}`;
+  let url = `http://localhost:8080/api/schedules/${inputId}`;
   // console.log(url)
   return  axios.get(url);  
 }
 
 //delete time schedule 
 const deleteSchedule = (doctorid,date,timetype) =>{
-  let url = `https://api-truongcongtoan.herokuapp.com/api/schedules/${doctorid}/${date}/${timetype}`;
+  let url = `http://localhost:8080/api/schedules/${doctorid}/${date}/${timetype}`;
   console.log("url la ",url)
   return axios.delete(url);
 }
 //get schedule by doctorid and date
 const getSchedulebyDate = async (doctorid,date) =>{
-  let url = `https://api-truongcongtoan.herokuapp.com/api/schedules/${doctorid}/${date}`;
+  let url = `http://localhost:8080/api/schedules/${doctorid}/${date}`;
   return axios.get(url);
 }
 

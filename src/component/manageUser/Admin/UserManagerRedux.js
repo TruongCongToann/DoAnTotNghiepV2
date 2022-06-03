@@ -21,15 +21,15 @@ import LoadingPage from '../../CustomHooks/LoadingPage/LoadingPage';
 
 const UserManagerRedux = () => {
 
-    var url_Gender='https://api-truongcongtoan.herokuapp.com/api/allcode/gender';
-    var url_Position= 'https://api-truongcongtoan.herokuapp.com/api/allcode/position';
-    var url_Roles= 'https://api-truongcongtoan.herokuapp.com/api/allcode/role';
-    var url_Users="https://api-truongcongtoan.herokuapp.com/api/users";
-    var url_OutStandingDoctor = "https://api-truongcongtoan.herokuapp.com/api/users/0/6";
-    var url_doctor = 'https://api-truongcongtoan.herokuapp.com/api/users/doctors'; 
-    var url_Price = "https://api-truongcongtoan.herokuapp.com/api/allcode/PRICE";
-    var url_Payment = "https://api-truongcongtoan.herokuapp.com/api/allcode/PAYMENT";
-    var url_Province = "https://api-truongcongtoan.herokuapp.com/api/allcode/PROVINCE";
+    var url_Gender='http://localhost:8080/api/allcode/gender';
+    var url_Position= 'http://localhost:8080/api/allcode/position';
+    var url_Roles= 'http://localhost:8080/api/allcode/role';
+    var url_Users="http://localhost:8080/api/users";
+    var url_OutStandingDoctor = "http://localhost:8080/api/users/0/6";
+    var url_doctor = 'http://localhost:8080/api/users/doctors'; 
+    var url_Price = "http://localhost:8080/api/allcode/PRICE";
+    var url_Payment = "http://localhost:8080/api/allcode/PAYMENT";
+    var url_Province = "http://localhost:8080/api/allcode/PROVINCE";
 
     //fetch data 
     const { data:gender } = useFetch(url_Gender);

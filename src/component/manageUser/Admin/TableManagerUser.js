@@ -90,7 +90,7 @@ const TableManagerUser = (props) => {
                 <table id = "TableManagerUser">
                     <thead>
                     <tr>
-                        <th >Số thứ tự</th>
+                        <th>Số thứ tự</th>
                         <th>Tên đăng nhập</th>
                         <th>email</th>
                         <th>Mật khẩu</th>

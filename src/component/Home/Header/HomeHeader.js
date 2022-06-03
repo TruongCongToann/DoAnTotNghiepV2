@@ -87,7 +87,7 @@ const HomeHeader = (props) => {
 
         </div>
     {
-      props.isShowBanner ==true &&
+      props.isShowBanner ===true &&
 
      
 

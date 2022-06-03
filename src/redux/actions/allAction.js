@@ -5,6 +5,7 @@ import loadAllUser from "./adminAction"
 import addAllDoctor from './Doctors'
 import addOutStandingDoctors from './Doctors' 
 import addSelectedDoctor from './Doctors'
+import addExtraDoctor from './Doctors'
 
 import addUserFromTable from "./adminAction"
 const allAction = {
@@ -15,7 +16,8 @@ const allAction = {
     addUserFromTable:addUserFromTable,
     addAllDoctor:addAllDoctor,
     addOutStandingDoctors:addOutStandingDoctors,
-    addSelectedDoctor:addSelectedDoctor
+    addSelectedDoctor:addSelectedDoctor,
+    addExtraDoctor:addExtraDoctor
 
 }
 export default allAction;

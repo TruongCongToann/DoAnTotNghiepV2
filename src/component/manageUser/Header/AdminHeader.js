@@ -39,7 +39,7 @@ const Header = () => {
     }
 
     const handleManageDoctor = () =>{
-        history.push('/manager-doctors-redux')
+        history.push('/manage-doctors')
 
     }
     const handleManageSchedule = () =>{

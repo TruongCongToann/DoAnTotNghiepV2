@@ -22,8 +22,8 @@ const Login = () => {
 
     const history = useHistory();
 
-    var url='https://api-truongcongtoan.herokuapp.com/api/users';
-    var url_Admin = 'https://api-truongcongtoan.herokuapp.com/api/admin/';    
+    var url='http://localhost:8080/api/users';
+    var url_Admin = 'http://localhost:8080/api/admin/';    
     //fetch data 
     const { data:data } = useFetch(url);
     const {data:admin} = useFetch(url_Admin);

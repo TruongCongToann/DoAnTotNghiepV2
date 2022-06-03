@@ -1,6 +1,6 @@
 .user-redux-container{
-    width: 1381px;
-    height: 682px;
+    width: 100%;
+    height: auto;
    
 }
 .user-redux-container .user-manager-redux-title{

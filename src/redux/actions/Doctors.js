@@ -1,4 +1,4 @@
-import {ADD_ALL_DOCTORS,ADD_OUTSTANDING_DOCTORS, ADD_SELECTED_DOCTOR} from '../constant'
+import {ADD_ALL_DOCTORS,ADD_OUTSTANDING_DOCTORS, ADD_SELECTED_DOCTOR,ADD_EXTRA_DOCTOR} from '../constant'
 
 
 const addAllDoctor = (doctorsObj) => {
@@ -21,4 +21,10 @@ const addSelectedDoctor = (doctorsObj) => {
         payload: doctorsObj
     }
 }
-export default {addAllDoctor,addOutStandingDoctors,addSelectedDoctor}
+const addExtraDoctor = (doctorsObj) => {
+    return {
+        type:ADD_EXTRA_DOCTOR,
+        payload: doctorsObj
+    }
+}
+export default {addAllDoctor,addOutStandingDoctors,addSelectedDoctor,addExtraDoctor}

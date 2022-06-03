@@ -9,7 +9,7 @@ import LoadingPage from '../../../CustomHooks/LoadingPage/LoadingPage';
 
 const OutStandingDoctor = (props) => {
 
-  const url = "https://api-truongcongtoan.herokuapp.com/api/users/0/6";
+  const url = "http://localhost:8080/api/users/0/6";
 
   const {data:doctorData} = useFetch(url);
   const history = useHistory();

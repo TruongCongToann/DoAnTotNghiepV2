@@ -1,13 +1,13 @@
 import React from 'react'
 import './Header.css'
 import {Navbar,NavbarBrand,NavbarToggler,Collapse,Nav,
-    NavLink,UncontrolledDropdown,NavItem,DropdownToggle,DropdownMenu,DropdownItem,Navigator
+    UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem
 } from 'reactstrap';
 import { useHistory} from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 
 import allAction from '../../../redux/actions/allAction';
-import { useFetch ,editUser} from '../../CustomHooks/useFetch';
+// import { useFetch ,editUser} from '../../CustomHooks/useFetch';
 
 const DoctorHeader = () => {
     const history = useHistory()
@@ -18,7 +18,7 @@ const DoctorHeader = () => {
     // console.log("user lay tu redux la ",currentUser)
 
     //goi api lay data 
-    var url_Users="https://api-truongcongtoan.herokuapp.com/api/users";
+    var url_Users="http://localhost:8080/api/users";
 
     const redirectHome =() =>{
 

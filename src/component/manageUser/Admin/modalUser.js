@@ -53,7 +53,7 @@ const ModalUser = (props) => {
     const [isOpen, setisOpen] = useState(false);
     const [userEditData, setuserEditData] = useState('');
 
-    var url = "https://api-truongcongtoan.herokuapp.com/api/users";
+    var url = "http://localhost:8080/api/users";
 
     const redux_user_Admin=useSelector(state=>state.admin);
     // console.log("du lieu lay duoc tu redux la ",redux_user_Admin.listUsers)

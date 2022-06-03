@@ -5,15 +5,16 @@ import {getDetailInforDoctor} from '../../../../CustomHooks/useFetch'
 
 import './detaidoctor.css';
 import DoctorSchedule from '../DoctorSchedule/DoctorSchedule';
+import DoctorExtraInfo from './DoctorExtraInfo';
 const DetailDoctor = () => {
   let { id } = useParams();
   const [detailDoctor, setdetailDoctor] = useState({});
   const [currentDoctorID, setcurrentDoctorID] = useState(-1)
 
   const [parentDoctorID, setparentDoctorID] = useState(-1)
-
+const url_MarkDown ="http://localhost:8080/api/markdowns/";
   useEffect( async () => {
-    let response = await getDetailInforDoctor(id);
+    let response = await getDetailInforDoctor(url_MarkDown,id);
     if (response!=null) {
       setdetailDoctor(response.data);
       setcurrentDoctorID(id)
@@ -42,7 +43,6 @@ const DetailDoctor = () => {
       }
     }
 }
-//  console.log("detail doctpr la ",detailDoctor)
   
   return (
     <>
@@ -86,7 +86,9 @@ const DetailDoctor = () => {
                  
                 </div>
                 <div className='content-right'>
-
+                    <DoctorExtraInfo
+                    currentDoctorID = {currentDoctorID} 
+                    />
                 </div>
           </div>
           <div className='chi-tiet-doctor'>

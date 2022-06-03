@@ -1,9 +1,11 @@
 .pagination{
    align-items: center;
+    position: absolute;
+    left: 50%;
 }
 .page-item:first-child .page-link {
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
-    margin-left: 500px;
+    /* margin-left: 500px; */
     
 }
